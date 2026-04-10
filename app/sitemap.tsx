@@ -55,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
     url: `${baseUrl}/services/${service}`,
     lastModified: new Date('2026-04-10'),
-    changeFrequency: 'bi-weekly' as const,
+    changeFrequency: 'weekly', // Fixed: Changed from bi-weekly to weekly
     priority: 0.9,
   }));
 
@@ -81,7 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const articlePages: MetadataRoute.Sitemap = articles.map((article) => ({
     url: `${baseUrl}/articles/${article}`,
     lastModified: new Date('2026-04-10'),
-    changeFrequency: 'monthly' as const,
+    changeFrequency: 'monthly',
     priority: 0.8,
   }));
 
